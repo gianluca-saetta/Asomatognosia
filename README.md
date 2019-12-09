@@ -1,2 +1,2 @@
 # Asomatognosia
-Scripts used to examine the visuo-motor imagery of a patient with asomatognosia and ten healthy controls
+R Script used to analyze the data presented in the paper by Saetta et al. "Asomatognosia: proposed structured interview and assessment of visuo-motor imagery"
