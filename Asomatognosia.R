@@ -118,7 +118,6 @@ Mean_P1_MOLA <- mean(subset(MentalRotation_RTS_MOLA,Laterality_Rotation_View_Lim
 
 
 #Crawford test 
-library(psycho)
 crawford.test(Mean_P1_MOLA, scores_contr_MOLA_vector, Mean_Controls_MOLA, SD_Controls_MOLA, n = 10)
 plot(crawford.test(Mean_P1_MOLA, scores_contr_MOLA_vector, Mean_Controls_MOLA, SD_Controls_MOLA, n = 10))
 
