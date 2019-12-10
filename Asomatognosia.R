@@ -31,7 +31,7 @@ levels(MentalRotation$Group)[levels(MentalRotation$Group)== "P1"] <- "ASG"
 levels(MentalRotation$Group)[levels(MentalRotation$Group)== "Controls"] <- "Ten Controls" 
 
 
-#Relevel the levels of the factor "group" (only for plot aesthetics )
+#Relevel the levels of the factor "group" (only for the plot aesthetics)
 MentalRotation$Group<- relevel(MentalRotation$Group, "ASG")
 MentalRotation$Rotation <- as.factor(MentalRotation$Rotation)
 
@@ -61,7 +61,7 @@ sd(MentalRotation_ACC_by_subject$ACC[which(MentalRotation_demographics$Group == 
 mean(MentalRotation_ACC_by_subject$ACC[which(MentalRotation_demographics$Group == "ASG")])
 
 
-#For RTs analysis we consider only RTs associated with correct responses:
+#For RTs analysis we consider only RTs associated with correct responses
 library(dplyr)
 MentalRotation <- MentalRotation %>%
   filter(ACC == 1)
@@ -103,7 +103,7 @@ ggplot_control_ResponseTime +
         panel.background = element_blank(), axis.line = element_line(colour = "black")) 
 
 
-####Bqyesian Crawford  T-test for comparing ASG's RTS to left feet shown at 270° in palm view with ####
+####Bayesian Crawford  T-test for comparing ASG's RTS to left feet shown at 270° in palm view with
 #those of the controls#
 
 
@@ -123,8 +123,8 @@ crawford.test(Mean_P1_MOLA, scores_contr_MOLA_vector, Mean_Controls_MOLA, SD_Con
 plot(crawford.test(Mean_P1_MOLA, scores_contr_MOLA_vector, Mean_Controls_MOLA, SD_Controls_MOLA, n = 10))
 
 
-####Bqyesian Crawford  T-test for comparing ASG's RTS to left feet shown at 90° in palm view with ####
-#those of the controls#
+####Bqyesian Crawford  T-test for comparing ASG's RTS to left feet shown at 90° in palm view with
+#those of the controls
 
 
 #Arrange the data for application of the function crawford.test from the package "psycho"
@@ -175,7 +175,8 @@ ggplot_control_ResponseTime +
         panel.background = element_blank(), axis.line = element_line(colour = "black")) 
 
 
-####Bqyesian Crawford  T-test for comparing ASG's RTS to left feet shown at 180° in back view with ####
+####Bayesian Crawford  T-test for comparing ASG's RTS to left feet shown at 180° in back view with
+#those of the controls
 
 
 #Arrange the data for application of the function crawford.test from the package "psycho"
